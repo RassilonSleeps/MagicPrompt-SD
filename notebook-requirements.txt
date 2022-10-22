@@ -5,4 +5,4 @@ gradio
 jupyter
 ipywidgets
 jupyterlab_widgets
-jupyter_over_http_ws
+jupyter_http_over_ws
