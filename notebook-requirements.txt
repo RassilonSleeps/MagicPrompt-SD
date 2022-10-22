@@ -1,0 +1,8 @@
+transformers
+transformers[sentencepiece]
+torch
+gradio
+jupyter
+ipywidgets
+jupyterlab_widgets
+jupyter_over_http_ws
