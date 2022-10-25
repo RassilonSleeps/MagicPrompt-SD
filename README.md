@@ -3,7 +3,9 @@
 Based on Gustavosta's app.py script used for his [Hugging Face Spaces](https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion)
 This is a trimmed and simplified implementation intended for running locally directly with python or via notebook
 
-### **Requires python 3.4 or higher**
+### Requirements:
+	- **Python 3.4 or higher**
+	- **Git-LFS** 
 
 # How to use:
 ###		Python
