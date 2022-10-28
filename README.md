@@ -1,19 +1,28 @@
 ### Credit to [Gustavosta](https://huggingface.co/Gustavosta) on Hugging Face for model
 
-Based on Gustavosta's app.py script used for his [Hugging Face Spaces](https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion)
+Based on Gustavosta's app.py script used for his [Hugging Face Spaces](https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion).
 This is a trimmed and simplified implementation intended for running locally directly with python or via notebook
 
 ### Requirements:
 	- Python 3.4 or higher
 	- Git-LFS 
+	- (Linux): python pip, tkinter
+		- Tested on:
+		- arch based: pacman -S python-pip tk
+		- ubuntu 22.04 based: apt install python3-pip python3-tk
 ### Recommended:
 	Use of virtual environments via venv or conda
-	- Included Windows batch files implement venv during install
+	- Included script files implement venv during install
 
 # How to use:
 
-### (Windows): Batch files included for all of the following methods
-### (Unix): Shell scripts are planned, but not implemented
+### Scripts 
+	- (Windows) Seperate batch files for python, jupyter, and colab local runtime
+		- Plan to make single script with launch arguments
+	- (Linux) Single batch script with launch arguments
+		- [no arguments] installs base requirements and launches normally
+		- [ --jupyter ] installs base and jupyter requirements, launches notebook in browser
+		- [ --colab ] installs base and jupyter requirements, allows local runtime from colab notebook
 
 ###		Python
 	- From terminal use " pip install -r requirements.txt " to grab dependencies
@@ -61,7 +70,8 @@ This is a trimmed and simplified implementation intended for running locally dir
 	- While some would consider it a nice addition, I find no value for my use case
 * Added a favicon :hugs:
 
-###Pull requests welcome, I have no former python experience
+### Pull requests welcome! I have no former python, and minimal scripting, experience.
+#### This was inteded as a learning project to get into python.
 
 ## 💻 You can see other MagicPrompt models:
 
