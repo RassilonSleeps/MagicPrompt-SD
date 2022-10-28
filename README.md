@@ -4,29 +4,36 @@ Based on Gustavosta's app.py script used for his [Hugging Face Spaces](https://h
 This is a trimmed and simplified implementation intended for running locally directly with python or via notebook
 
 ### Requirements:
-	- **Python 3.4 or higher**
-	- **Git-LFS** 
+	- Python 3.4 or higher
+	- Git-LFS 
+### Recommended:
+	Use of virtual environments via venv or conda
+	- Included Windows batch files implement venv during install
 
 # How to use:
+
+### (Windows): Batch files included for all of the following methods
+### (Unix): Shell scripts are planned, but not implemented
+
 ###		Python
-	- From terminal use 'pip install -r requirements.txt' to grab dependencies
-	- Run 'python MagicPrompt.py'
-	- Visit 'localhost:8088' in browser (substitute 'localhost' with devices ip address if run remotely)
+	- From terminal use " pip install -r requirements.txt " to grab dependencies
+	- Run python MagicPrompt.py
+	- Visit localhost:8088 in browser (substitute 'localhost' with devices ip address if run remotely)
 ###		Jupyter Notebook
-	- From terminal use 'pip install -r notebook-requirements.txt' to grab dependencies
-	- Run 'jupyter notebook MagicPrompt.ipynb'
+	- From terminal use " pip install -r notebook-requirements.txt " to grab dependencies
+	- Run " jupyter notebook MagicPrompt.ipynb "
 ###		Google Colab
 	- Visit https://colab.research.google.com
 	- Choose Upload tab
-	- Browse to file 'MagicPrompt.ipynb'
+	- Browse to file " MagicPrompt.ipynb "
 	
 	- ***  Using Google's free servers: ***
 	- Just click connect in top right
 	- Use Runtime menu to run all
 	
 	- ***  For local:  ***
-	- From terminal use 'pip install -r notebook-requirements.txt' to grab dependencies
-	- Run 'jupyter notebook --no-browser --NotebookApp.allow_origin="https://colab.research.google.com" --port=8888 --NotebookApp.port_retries=0'
+	- From terminal use " pip install -r notebook-requirements.txt " to grab dependencies
+	- Run " jupyter notebook --no-browser --NotebookApp.allow_origin="https://colab.research.google.com" --port=8888 --NotebookApp.port_retries=0 "
 	- Copy URL containing token (e.g. http://localhost:8888/?token=5bbec....)
 	- In Colab, use dropdown next to connect and select 'Connect to a local runtime'
 	- Paste URL into the 'Backend URL' box and click connect
@@ -39,20 +46,22 @@ This is a trimmed and simplified implementation intended for running locally dir
 > If you want to test the model with a demo, you can go to: "[spaces/Gustavosta/MagicPrompt-Stable-Diffusion](https://huggingface.co/spaces/Gustavosta/MagicPrompt-Stable-Diffusion)".
 
 # Changes from 'Spaces' app.py
-* Moved model into local directory, allows for offline use without calls to huggingface.co
+* Model is saved to local folder allowing for offline use
 * Colab-style notebook file for easy editing and use of gradio's in line interface
-* Enabled gradio flagging feature, allows saving of prompt to flagged/log.csv
+* Enabled gradio flagging feature, allows saving of prompt to log.csv
 * Trimmed code by switching gradio's '.interface()' to '.interface.from_pipeline'
 	- This was done to simplify code and prevent log.csv from filling with unwanted prompts
 	- Likely going to change once I better learn python and the options of the transformers library
 * Added requirements.txt for quick terminal deployment via 'pip install -r requirements.txt'
 * Also added a seperate notebook-requirements.txt for use with jupyter notebook
 * Changed port from gradio's standard to allow running at the same time as another gradio interface (e.g. Automatic1111's WebUI using default ports)
-* Changed listening address from '127.0.0.1' (local host only) to '0.0.0.0' (network wide) \n
+* Changed listening address from '127.0.0.1' (local host only) to '0.0.0.0' (network wide)
 	- allows for access from other devices, useful for deployment on headless server
-* Removed use of ideas.txt for examples \n
+* Removed use of ideas.txt for examples
 	- While some would consider it a nice addition, I find no value for my use case
-* Added a favicon :)
+* Added a favicon :hugs:
+
+###Pull requests welcome, I have no former python experience
 
 ## 💻 You can see other MagicPrompt models:
 
