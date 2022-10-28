@@ -18,11 +18,10 @@ This is a trimmed and simplified implementation intended for running locally dir
 
 ### Scripts 
 	- (Windows) Seperate batch files for python, jupyter, and colab local runtime
-		- Plan to make single script with launch arguments
 	- (Linux) Single batch script with launch arguments
 		- [no arguments] installs base requirements and launches normally
-		- [ --jupyter ] installs base and jupyter requirements, launches notebook in browser
-		- [ --colab ] installs base and jupyter requirements, allows local runtime from colab notebook
+		- [ --jupyter ] installs base/jupyter requirements, launches notebook in browser
+		- [ --colab ] installs base/jupyter requirements, allows local runtime from Google Colab
 
 ###		Python
 	- From terminal use " pip install -r requirements.txt " to grab dependencies
@@ -40,7 +39,7 @@ This is a trimmed and simplified implementation intended for running locally dir
 	- Just click connect in top right
 	- Use Runtime menu to run all
 	
-	- ***  For local:  ***
+	- ***  For local runtime:  ***
 	- From terminal use " pip install -r notebook-requirements.txt " to grab dependencies
 	- Run " jupyter notebook --no-browser --NotebookApp.allow_origin="https://colab.research.google.com" --port=8888 --NotebookApp.port_retries=0 "
 	- Copy URL containing token (e.g. http://localhost:8888/?token=5bbec....)
@@ -61,7 +60,7 @@ This is a trimmed and simplified implementation intended for running locally dir
 * Trimmed code by switching gradio's '.interface()' to '.interface.from_pipeline'
 	- This was done to simplify code and prevent log.csv from filling with unwanted prompts
 	- Likely going to change once I better learn python and the options of the transformers library
-* Added requirements.txt for quick terminal deployment via 'pip install -r requirements.txt'
+* Added requirements.txt for quick terminal deployment via pip
 * Also added a seperate notebook-requirements.txt for use with jupyter notebook
 * Changed port from gradio's standard to allow running at the same time as another gradio interface (e.g. Automatic1111's WebUI using default ports)
 * Changed listening address from '127.0.0.1' (local host only) to '0.0.0.0' (network wide)
@@ -70,8 +69,17 @@ This is a trimmed and simplified implementation intended for running locally dir
 	- While some would consider it a nice addition, I find no value for my use case
 * Added a favicon :hugs:
 
+## Planned
+* Add gradio options to test transformers temperature setting
+* Add gradio options to test transformers beam search
+* Add gradio options to select number of return sequences
+* Add gradio option for random seed selection
+* Add gradio tab for log.csv entries
+* Consolidate .bat files into single file with launch args
+* Add launch args for port selection
+
 ### Pull requests welcome! I have no former python, and minimal scripting, experience.
-#### This was inteded as a learning project to get into python.
+#### This was intended as a learning project to get into python.
 
 ## 💻 You can see other MagicPrompt models:
 
